@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金曜日学習予約サイト</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .reservation-form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .status-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .status-table th, .status-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .status-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>金曜日学習予約サイト</h1>
+    <p>毎週金曜日の学習スペースを予約できます。</p>
+
+    <div class="reservation-form">
+        <h2>予約する</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">お名前:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="date">予約日:</label>
+                <select id="date" name="date" required>
+                    <option value="">日付を選択してください</option>
+                    <option value="2025-09-26">2025年9月26日 (金)</option>
+                    <option value="2025-10-03">2025年10月3日 (金)</option>
+                    <option value="2025-10-10">2025年10月10日 (金)</option>
+                    <option value="2025-10-17">2025年10月17日 (金)</option>
+                    <option value="2025-10-24">2025年10月24日 (金)</option>
+                    <option value="2025-10-31">2025年10月31日 (金)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="time">時間:</label>
+                <select id="time" name="time" required>
+                    <option value="">時間を選択してください</option>
+                    <option value="16:00-17:00">16:00 - 17:00</option>
+                    <option value="17:00-18:00">17:00 - 18:00</option>
+                    <option value="18:00-19:00">18:00 - 19:00</option>
+                    <option value="19:00-20:00">19:00 - 20:00</option>
+                </select>
+            </div>
+            <button type="submit">予約を確定する</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>予約状況</h2>
+        <p>以下の表で各日の予約状況を確認できます。</p>
+        <table class="status-table">
+            <thead>
+                <tr>
+                    <th>日付</th>
+                    <th>16:00-17:00</th>
+                    <th>17:00-18:00</th>
+                    <th>18:00-19:00</th>
+                    <th>19:00-20:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025年9月26日 (金)</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                </tr>
+                <tr>
+                    <td>2025年10月3日 (金)</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                </tr>
+                <tr>
+                    <td>2025年10月10日 (金)</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                </tr>
+                <tr>
+                    <td>2025年10月17日 (金)</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                </tr>
+                <tr>
+                    <td>2025年10月24日 (金)</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                </tr>
+                <tr>
+                    <td>2025年10月31日 (金)</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                    <td>空き</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
